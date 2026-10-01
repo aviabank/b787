@@ -42,23 +42,6 @@
         .contract-box .copy-btn:hover { color: #8FAF3F; }
         .contract-box .solscan-link { color: #5A649A; text-decoration: none; font-size: 13px; font-family: 'Segoe UI', sans-serif; margin-left: 8px; }
         .contract-box .solscan-link:hover { color: #fff; }
-        .pool-box {
-            background: rgba(74,140,255,0.05); border: 1px solid rgba(74,140,255,0.15);
-            border-radius: 12px; padding: 16px; margin: 20px 0;
-            text-align: center; font-size: 13px; color: #8A94C8; font-family: 'Courier New', monospace;
-        }
-        .pool-box .addr { color: #4A8CFF; }
-        .pool-box .copy-btn { background: transparent; border: none; color: #5A649A; cursor: pointer; font-size: 13px; font-family: 'Segoe UI', sans-serif; }
-        .pool-box .copy-btn:hover { color: #4A8CFF; }
-        .pool-box .link { color: #4A8CFF; text-decoration: none; font-size: 13px; font-family: 'Segoe UI', sans-serif; margin-left: 8px; }
-        .pool-box .link:hover { color: #fff; }
-        .video-tutorial {
-            max-width: 700px; margin: 24px auto;
-            border-radius: 16px; overflow: hidden;
-            border: 2px solid rgba(143,175,63,0.3);
-            box-shadow: 0 10px 40px rgba(143,175,63,0.15);
-        }
-        .video-tutorial video { width: 100%; display: block; }
         .back-link { display: inline-block; margin-top: 20px; color: #8FAF3F; text-decoration: none; font-weight: 500; }
         .back-link:hover { text-decoration: underline; }
         .logo-img { height: 60px; width: auto; margin-bottom: 20px; border-radius: 50%; }
@@ -72,7 +55,7 @@
         .counter-box .counter-holders { color: #2ECC40; font-weight: 600; }
         .counter-box .counter-clients { color: #4A8CFF; font-weight: 600; }
         @media (max-width: 700px) { .method-grid { grid-template-columns: 1fr 1fr; } .glass-card { padding: 24px; } }
-        @media (max-width: 450px) { .method-grid { grid-template-columns: 1fr; } .contract-box { font-size: 11px; } .pool-box { font-size: 11px; } }
+        @media (max-width: 450px) { .method-grid { grid-template-columns: 1fr; } .contract-box { font-size: 11px; } }
     </style>
 </head>
 <body>
@@ -82,14 +65,6 @@
         <img src="https://raw.githubusercontent.com/123tokens/b787/refs/heads/main/b787_logo.png" alt="Boeing 787" class="logo-img" />
         <h1>Buy <span class="highlight">Boeing 787 ($B787)</span></h1>
         <p class="sub">Choose your preferred payment method</p>
-
-        <!-- ВИДЕО-ТУТОРИАЛ -->
-        <div class="video-tutorial">
-            <video controls playsinline poster="https://raw.githubusercontent.com/123tokens/b787/refs/heads/main/b787_logo.png">
-                <source src="b787_how_to_buy.mp4" type="video/mp4">
-                Your browser does not support video.
-            </video>
-        </div>
 
         <div class="method-grid">
             <a href="https://opensea.io/token/solana/B787ContractAddressHere" target="_blank" class="method-card">
@@ -102,10 +77,10 @@
                 <span class="name">Jupiter Swap</span>
                 <span class="desc">Any crypto → B787</span>
             </a>
-            <a href="https://www.geckoterminal.com/solana/pools/B787PoolAddressHere" target="_blank" class="method-card">
-                <span class="icon">🌊</span>
-                <span class="name">Meteora Pool</span>
-                <span class="desc">$B787/USDC • $0.01</span>
+            <a href="https://solscan.io/token/B787ContractAddressHere" target="_blank" class="method-card">
+                <span class="icon">🔍</span>
+                <span class="name">Solscan</span>
+                <span class="desc">Check contract</span>
             </a>
             <a href="https://www.binance.com/" target="_blank" class="method-card">
                 <span class="icon">🏦</span>
@@ -151,12 +126,6 @@
             📜 Contract: <span class="addr">B787ContractAddressHere</span>
             <button onclick="navigator.clipboard.writeText('B787ContractAddressHere')" class="copy-btn">📋 Copy</button>
             <a href="https://solscan.io/token/B787ContractAddressHere" target="_blank" class="solscan-link">🔍 Solscan</a>
-        </div>
-
-        <div class="pool-box">
-            🌊 Meteora Pool ($B787/USDC): <span class="addr">B787PoolAddressHere</span>
-            <button onclick="navigator.clipboard.writeText('B787PoolAddressHere')" class="copy-btn">📋 Copy</button>
-            <a href="https://www.geckoterminal.com/solana/pools/B787PoolAddressHere" target="_blank" class="link">🔍 GeckoTerminal</a>
         </div>
 
         <a href="index.html" class="back-link">← Back to Boeing 787 Home</a>
