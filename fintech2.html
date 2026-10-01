@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Boeing 787 ($B787) — Leasing • Parts • Fintech</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/123tokens/b787/refs/heads/main/b787_logo.png" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0A0E27; color: #E0E6FF;
+            line-height: 1.6; padding-top: 80px; padding-bottom: 60px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(10,14,39,0.92); backdrop-filter: blur(12px);
+            z-index: 100; border-bottom: 1px solid rgba(143,175,63,0.2);
+            padding: 10px 0;
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 10px;
+        }
+        .logo { display: flex; align-items: center; gap: 8px; }
+        .logo img { height: 36px; width: auto; border-radius: 50%; }
+        .logo-text { font-size: 20px; font-weight: 700; color: #fff; }
+        nav { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+        nav a { color: #8A94C8; text-decoration: none; font-size: 12px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #8FAF3F; }
+        nav a.active { color: #8FAF3F; border-bottom: 2px solid #8FAF3F; }
+        .btn-primary {
+            background: #8FAF3F; color: #0A0E27; padding: 6px 18px;
+            border-radius: 30px; font-weight: 700; text-decoration: none;
+            transition: 0.3s; display: inline-block; font-size: 13px;
+        }
+        .btn-primary:hover { background: #A8C94F; transform: scale(1.02); }
+        .btn-secondary {
+            background: transparent; color: #8FAF3F; padding: 6px 18px;
+            border-radius: 30px; font-weight: 600; text-decoration: none;
+            border: 1px solid #8FAF3F; transition: 0.3s; display: inline-block;
+            font-size: 13px;
+        }
+        .btn-secondary:hover { background: #8FAF3F; color: #0A0E27; }
+        section { padding: 30px 0; }
+        .section-header { text-align: center; margin-bottom: 30px; }
+        .section-tag {
+            display: inline-block; background: rgba(143,175,63,0.12);
+            color: #8FAF3F; padding: 4px 16px; border-radius: 20px;
+            font-size: 12px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section-header h1 { font-size: 34px; font-weight: 700; margin: 8px 0; }
+        .section-header h1 .highlight { color: #8FAF3F; }
+        .section-header p { color: #8A94C8; max-width: 600px; margin: 0 auto; }
+        .rwa-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px; margin-bottom: 24px;
+        }
+        .rwa-card {
+            background: rgba(26,30,65,0.4); border: 1px solid #1E2350;
+            border-radius: 16px; padding: 24px 22px; transition: 0.3s;
+        }
+        .rwa-card:hover { border-color: #8FAF3F; transform: translateY(-4px); }
+        .rwa-card .rwa-icon { font-size: 38px; margin-bottom: 10px; }
+        .rwa-card h3 { color: #fff; font-size: 19px; margin-bottom: 6px; }
+        .rwa-card p { color: #8A94C8; font-size: 14px; }
+        .feature-badge {
+            display: inline-block; background: rgba(143,175,63,0.15);
+            color: #8FAF3F; padding: 2px 12px; border-radius: 20px;
+            font-size: 11px; font-weight: 600; text-transform: uppercase;
+            margin-top: 8px; margin-right: 4px;
+        }
+        .image-block { max-width: 900px; margin: 30px auto; text-align: center; }
+        .image-block img {
+            max-width: 100%; border-radius: 20px;
+            border: 1px solid #1E2350;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .contract-box {
+            background: rgba(143,175,63,0.05); border: 1px solid rgba(143,175,63,0.15);
+            border-radius: 12px; padding: 14px 16px; margin: 20px 0;
+            text-align: center; font-size: 13px; color: #8A94C8; font-family: 'Courier New', monospace;
+        }
+        .contract-box .addr { color: #8FAF3F; }
+        .contract-box .copy-btn { background: transparent; border: none; color: #5A649A; cursor: pointer; font-size: 13px; font-family: 'Segoe UI', sans-serif; }
+        .contract-box .copy-btn:hover { color: #8FAF3F; }
+        .contract-box .solscan-link { color: #5A649A; text-decoration: none; font-size: 13px; font-family: 'Segoe UI', sans-serif; margin-left: 8px; }
+        .contract-box .solscan-link:hover { color: #fff; }
+        .counter-box {
+            text-align: center; padding: 16px;
+            background: rgba(143,175,63,0.05); border-radius: 12px;
+            margin: 20px 0; font-size: 14px; color: #8A94C8;
+            font-family: 'Courier New', monospace;
+        }
+        .counter-box .counter-visitors { color: #8FAF3F; font-weight: 600; }
+        .counter-box .counter-holders { color: #2ECC40; font-weight: 600; }
+        .counter-box .counter-clients { color: #4A8CFF; font-weight: 600; }
+        .back-link { display: inline-block; margin-top: 16px; color: #8FAF3F; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        footer {
+            background: #060920; padding: 20px 0 16px; text-align: center;
+            border-top: 1px solid #1E2350; margin-top: 20px;
+        }
+        footer p { color: #3A406A; font-size: 13px; }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: stretch; }
+            nav { justify-content: center; gap: 6px; }
+            nav a { font-size: 10px; }
+            .section-header h1 { font-size: 26px; }
+            .contract-box { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/123tokens/b787/refs/heads/main/b787_logo.png" alt="Boeing 787" />
+            <span class="logo-text">BOEING 787 $B787</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="fintech1.html">Use Cases</a>
+            <a href="fintech2.html" class="active">Leasing • Parts</a>
+            <a href="trade.html">Trade</a>
+            <a href="ecosystem.html">Ecosystem</a>
+            <a href="https://123tokens.github.io/aviatrust/">AviaTrust</a>
+        </nav>
+        <a href="buy.html" class="btn-primary">Buy $B787</a>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Leasing • Parts • Fintech</span>
+            <h1>Powerful <span class="highlight">Fintech Infrastructure</span></h1>
+            <p>$B787 is the gateway to aircraft leasing, parts trading, and global payment rails.</p>
+        </div>
+
+        <div class="image-block">
+            <img src="b787_fintech_diagram.png" alt="Boeing 787 Fintech Diagram" />
+        </div>
+
+        <div class="rwa-grid">
+            <div class="rwa-card">
+                <div class="rwa-icon">✈️</div>
+                <h3>Aircraft Leasing</h3>
+                <p>$B787 is the unit of account for 787 leasing rights. AerCap, the world's largest 787 owner, operates ~140 Dreamliners. Airlines lease, lessors hold, $B787 tracks the flow.</p>
+                <span class="feature-badge">AerCap</span>
+                <span class="feature-badge">Leasing</span>
+            </div>
+
+            <div class="rwa-card">
+                <div class="rwa-icon">🔧</div>
+                <h3>Parts & Components</h3>
+                <p>The 787's interchangeable engines (GEnx / Trent 1000) and composite airframe create a global parts pool. $B787 can represent claims on this pool.</p>
+                <span class="feature-badge">GEnx</span>
+                <span class="feature-badge">Trent 1000</span>
+                <span class="feature-badge">Composite</span>
+            </div>
+
+            <div class="rwa-card">
+                <div class="rwa-icon">📋</div>
+                <h3>Service History</h3>
+                <p>The 787's composite structure requires unique maintenance cycles. $B787 can carry service history — a tokenized logbook for each airframe.</p>
+                <span class="feature-badge">Logbook</span>
+                <span class="feature-badge">Maintenance</span>
+            </div>
+
+            <div class="rwa-card">
+                <div class="rwa-icon">🗺️</div>
+                <h3>Route Economics</h3>
+                <p>520+ new routes opened by the 787. Each route is an economic unit. $B787 tracks the value generated by point-to-point long-haul flying.</p>
+                <span class="feature-badge">520+ Routes</span>
+                <span class="feature-badge">Point-to-Point</span>
+            </div>
+
+            <div class="rwa-card">
+                <div class="rwa-icon">📈</div>
+                <h3>Leasing Yield</h3>
+                <p>AerCap's order book of ~140 787s shows institutional demand. $B787 represents exposure to this leasing economy — without being a security.</p>
+                <span class="feature-badge">Institutional</span>
+                <span class="feature-badge">Yield</span>
+            </div>
+
+            <div class="rwa-card">
+                <div class="rwa-icon">💳</div>
+                <h3>Global Payment Rails</h3>
+                <p>SWIFT, SEPA, POS, CIPS, Fedwire, CHIPS, BUNA, UPI, PIX, NPP — $B787 connects them all for aircraft and parts settlement.</p>
+                <span class="feature-badge">SWIFT</span>
+                <span class="feature-badge">SEPA</span>
+                <span class="feature-badge">UPI</span>
+                <span class="feature-badge">PIX</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 16px;">
+            <a href="fintech1.html" class="btn-secondary">← Back to Use Cases</a>
+        </div>
+
+        <div class="counter-box">
+            ✈️ <span class="counter-visitors">1B</span> passengers
+            &nbsp;·&nbsp;
+            📦 <span class="counter-holders">1,203</span> orders
+            &nbsp;·&nbsp;
+            ✅ <span class="counter-clients">475+</span> delivered
+        </div>
+
+        <div class="contract-box">
+            📜 Contract: <span class="addr">B787ContractAddressHere</span>
+            <button onclick="navigator.clipboard.writeText('B787ContractAddressHere')" class="copy-btn">📋 Copy</button>
+            <a href="https://solscan.io/token/B787ContractAddressHere" target="_blank" class="solscan-link">🔍 Solscan</a>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Boeing 787 Home</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 AviaTrust. Built on Solana. | Contract: B787ContractAddressHere</p>
+    </div>
+</footer>
+
+<script src="counter.js"></script>
+
+</body>
+</html>
