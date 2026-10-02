@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Boeing 787 ($B787) — Leasing & Parts Use Cases</title>
+    <title>Boeing 787 ($B787) — Use Cases</title>
     <link rel="icon" href="https://raw.githubusercontent.com/123tokens/b787/refs/heads/main/b787_logo.png" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -132,17 +132,16 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag">Fintech</span>
-            <h1>Leasing & Parts <span class="highlight">Use Cases</span></h1>
-            <p>From SWIFT to aircraft leasing — $B787 powers global aviation finance.</p>
+            <h1>Aircraft Sales & Parts <span class="highlight">Use Cases</span></h1>
+            <p>From SWIFT to 5000+ aircraft parts — $B787 powers global aviation finance.</p>
         </div>
 
         <div class="categories">
             <button class="cat-btn active" data-cat="all">All</button>
-            <button class="cat-btn" data-cat="payments">Payments</button>
+            <button class="cat-btn" data-cat="sales">Aircraft Sales</button>
             <button class="cat-btn" data-cat="leasing">Leasing</button>
             <button class="cat-btn" data-cat="parts">Parts</button>
-            <button class="cat-btn" data-cat="service">Service</button>
-            <button class="cat-btn" data-cat="business">Business</button>
+            <button class="cat-btn" data-cat="payments">Payments</button>
         </div>
 
         <div class="fintech-grid" id="fintechGrid"></div>
@@ -152,7 +151,7 @@
             &nbsp;·&nbsp;
             📦 <span class="counter-holders">1,203</span> orders
             &nbsp;·&nbsp;
-            ✅ <span class="counter-clients">475+</span> delivered
+            🔧 <span class="counter-clients">5000+</span> parts
         </div>
 
         <div class="contract-box">
@@ -173,10 +172,27 @@
 
 <script>
     const ideas = [
+        { icon: '💺', title: 'New 787 aircraft sales (list $248M)', cat: 'sales' },
+        { icon: '📝', title: 'Used 787 resale marketplace', cat: 'sales' },
+        { icon: '✍️', title: '787 purchase contract signing', cat: 'sales' },
+        { icon: '💵', title: 'Aircraft sale escrow via smart contract', cat: 'sales' },
+        { icon: '🌍', title: 'Cross-border aircraft delivery', cat: 'sales' },
+        { icon: '📋', title: 'Aircraft title transfer (tokenized)', cat: 'sales' },
+        { icon: '🤝', title: 'Aircraft dealer commissions', cat: 'sales' },
+        { icon: '🛫', title: 'Delivery flight tracking', cat: 'sales' },
         { icon: '✈️', title: '787 leasing rights (AerCap ~140)', cat: 'leasing' },
         { icon: '📋', title: 'Lease payment tracking', cat: 'leasing' },
         { icon: '🔁', title: 'Lease transfer & assignment', cat: 'leasing' },
         { icon: '💰', title: 'Lease yield distribution', cat: 'leasing' },
+        { icon: '📅', title: 'Lease maturity & renewal', cat: 'leasing' },
+        { icon: '🔧', title: 'GEnx engine parts (2000+)', cat: 'parts' },
+        { icon: '🔩', title: 'Trent 1000 engine parts (1500+)', cat: 'parts' },
+        { icon: '🧩', title: 'Composite airframe parts (800+)', cat: 'parts' },
+        { icon: '⚙️', title: 'Landing gear components (400+)', cat: 'parts' },
+        { icon: '📦', title: 'Avionics & cockpit parts (300+)', cat: 'parts' },
+        { icon: '🛠️', title: 'AOG (Aircraft on Ground) parts', cat: 'parts' },
+        { icon: '🔋', title: 'Power & battery systems', cat: 'parts' },
+        { icon: '🪟', title: 'Windows, doors, interiors', cat: 'parts' },
         { icon: '🏦', title: 'SWIFT international wire', cat: 'payments' },
         { icon: '🇪🇺', title: 'SEPA euro transfers', cat: 'payments' },
         { icon: '💳', title: 'POS terminal payments', cat: 'payments' },
@@ -185,26 +201,6 @@
         { icon: '🇦🇪', title: 'BUNA Arab payments', cat: 'payments' },
         { icon: '🇮🇳', title: 'UPI India instant', cat: 'payments' },
         { icon: '🇧🇷', title: 'PIX Brazil instant', cat: 'payments' },
-        { icon: '🇦🇺', title: 'NPP Australia', cat: 'payments' },
-        { icon: '🔧', title: 'GEnx engine parts pool', cat: 'parts' },
-        { icon: '🔩', title: 'Trent 1000 interchangeable', cat: 'parts' },
-        { icon: '🧩', title: 'Composite airframe claims', cat: 'parts' },
-        { icon: '⚙️', title: 'Landing gear tracking', cat: 'parts' },
-        { icon: '📦', title: 'Parts logistics payments', cat: 'parts' },
-        { icon: '🛠️', title: 'AOG (Aircraft on Ground) parts', cat: 'parts' },
-        { icon: '📋', title: 'Service logbook tokenization', cat: 'service' },
-        { icon: '🧾', title: 'Maintenance cycle tracking', cat: 'service' },
-        { icon: '🔍', title: 'Airframe history verification', cat: 'service' },
-        { icon: '📅', title: 'Scheduled maintenance tokens', cat: 'service' },
-        { icon: '🛬', title: 'C-check / D-check records', cat: 'service' },
-        { icon: '📦', title: 'Logistics micro-payments', cat: 'business' },
-        { icon: '🚚', title: 'Supply chain payments', cat: 'business' },
-        { icon: '🧾', title: 'Invoice factoring', cat: 'business' },
-        { icon: '📊', title: 'Analytics dashboard access', cat: 'business' },
-        { icon: '📞', title: 'Customer support ticketing', cat: 'business' },
-        { icon: '🛰️', title: 'Route data subscriptions', cat: 'business' },
-        { icon: '📈', title: 'Route economics tracking', cat: 'business' },
-        { icon: '✈️', title: '520+ new routes opened by 787', cat: 'business' },
     ];
 
     const grid = document.getElementById('fintechGrid');
