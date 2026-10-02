@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Boeing 787 ($B787) — The Proven Asset | AviaTrust</title>
-    <meta name="description" content="Boeing 787 Dreamliner — the proven asset of AviaTrust. 1B passengers, 1,203 orders, 475+ delivered. $0.01 → 100× to $1.00." />
+    <meta name="description" content="Boeing 787 Dreamliner — the proven asset of AviaTrust. 1B passengers, 1,203 orders, 475+ delivered. 5000+ aircraft parts. $0.01 → 100× to $1.00." />
     <link rel="icon" href="https://raw.githubusercontent.com/123tokens/b787/refs/heads/main/b787_logo.png" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,7 +16,6 @@
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ТИКЕРЫ */
         .ticker {
             position: fixed; left: 0; width: 100%; z-index: 1000;
             background: rgba(10, 14, 39, 0.95);
@@ -42,7 +41,6 @@
         @keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .ticker-bottom .ticker-track { animation-duration: 38s; }
 
-        /* ШАПКА */
         header {
             position: fixed; top: 36px; left: 0; width: 100%;
             background: rgba(10, 14, 39, 0.92); backdrop-filter: blur(12px);
@@ -106,11 +104,10 @@
         }
         .btn-glass:hover { background: rgba(143,175,63,0.2); border-color: #8FAF3F; }
 
-        /* HERO */
         .hero {
             padding: 20px 0 40px; position: relative; z-index: 1;
             min-height: 70vh; display: flex; align-items: center;
-            background-image: url('b787_hero_bg.jpg');
+            background-image: url('b787_hero_bg.png');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
         .hero::before {
@@ -175,7 +172,6 @@
             50% { transform: translateY(-15px) rotate(5deg); }
         }
 
-        /* ВИДЕО */
         .video-section { padding: 60px 0; position: relative; z-index: 1; }
         .video-wrapper {
             max-width: 900px; margin: 0 auto;
@@ -190,7 +186,6 @@
         }
         .video-wrapper video { width: 100%; display: block; }
 
-        /* БЫСТРАЯ ПОКУПКА */
         .quick-buy {
             max-width: 700px; margin: 0 auto 30px;
             background: rgba(26, 30, 65, 0.5); border: 1px solid #1E2350;
@@ -234,7 +229,6 @@
         .buy-links-grid a:hover { border-color: #8FAF3F; color: #8FAF3F; background: rgba(143,175,63,0.05); }
         .buy-links-grid a .icon { display: block; font-size: 18px; margin-bottom: 2px; }
 
-        /* СЕКЦИИ */
         section { padding: 60px 0; position: relative; z-index: 1; }
         .section-header { text-align: center; margin-bottom: 40px; }
         .section-tag {
@@ -276,7 +270,6 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
-        /* ПОДВАЛ */
         footer {
             background: #060920; padding: 30px 0 16px; position: relative; z-index: 1;
             border-top: 1px solid #1E2350; margin-bottom: 40px;
@@ -353,25 +346,23 @@
 </head>
 <body>
 
-<!-- ТИКЕР 1 -->
 <div class="ticker ticker-top">
     <div class="ticker-track">
         <span>✈️ <span class="highlight-ticker">Boeing 787 ($B787)</span> — The Proven Asset • AviaTrust • Solana</span>
         <span>✦ Contract: <span class="contract-ticker">B787ContractAddressHere</span></span>
         <span>✦ <span class="highlight-ticker">$0.01</span> → 100× to $1.00</span>
         <span>✦ 1,000,000,000 Supply • 365 Days Lock</span>
-        <span>✦ 1B Passengers • 1,203 Orders • 475+ Delivered</span>
-        <span>✦ SWIFT • SEPA • POS • Leasing • Parts Trading</span>
+        <span>✦ 1B Passengers • 1,203 Orders • 5000+ Parts</span>
+        <span>✦ SWIFT • SEPA • POS • Leasing • Aircraft Sales</span>
         <span>✈️ <span class="highlight-ticker">Boeing 787 ($B787)</span> — The Proven Asset • AviaTrust • Solana</span>
         <span>✦ Contract: <span class="contract-ticker">B787ContractAddressHere</span></span>
         <span>✦ <span class="highlight-ticker">$0.01</span> → 100× to $1.00</span>
         <span>✦ 1,000,000,000 Supply • 365 Days Lock</span>
-        <span>✦ 1B Passengers • 1,203 Orders • 475+ Delivered</span>
-        <span>✦ SWIFT • SEPA • POS • Leasing • Parts Trading</span>
+        <span>✦ 1B Passengers • 1,203 Orders • 5000+ Parts</span>
+        <span>✦ SWIFT • SEPA • POS • Leasing • Aircraft Sales</span>
     </div>
 </div>
 
-<!-- ШАПКА -->
 <header>
     <div class="container header-inner">
         <div class="logo">
@@ -389,12 +380,12 @@
             <a href="index.html" class="active">$B787</a>
             <a href="buy.html">Buy</a>
             <a href="trade.html">Trade</a>
+            <a href="fintech2.html">Leasing</a>
         </nav>
         <a href="buy.html" class="btn-primary">Buy $B787</a>
     </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <div class="container hero-inner">
         <div class="hero-content">
@@ -402,13 +393,13 @@
             <span class="plane-icon">✈</span>
             <h1>Boeing 787 — <span class="highlight">$B787</span> The Proven Asset</h1>
             <p>
-                The Boeing 787 Dreamliner — <strong>1 billion passengers</strong>, <strong>1,203 orders</strong>, <strong>475+ deliveries</strong>.
-                The most successful widebody in history. The proven asset of the AviaTrust fintech layer.
+                The Boeing 787 Dreamliner — <strong>1 billion passengers</strong>, <strong>1,203 orders</strong>, <strong>5000+ parts</strong>.
+                Aircraft sales, leasing, parts trading — all in one token.
             </p>
             <div class="hero-stats">
                 <div class="stat"><span class="stat-number counter-visitors">1B</span><span class="stat-label">Passengers</span></div>
                 <div class="stat"><span class="stat-number counter-holders">1,203</span><span class="stat-label">Orders</span></div>
-                <div class="stat"><span class="stat-number counter-clients">475+</span><span class="stat-label">Delivered</span></div>
+                <div class="stat"><span class="stat-number counter-clients">5000+</span><span class="stat-label">Parts</span></div>
                 <div class="stat"><span class="stat-number">$0.01</span><span class="stat-label">Price</span></div>
             </div>
             <div class="hero-actions">
@@ -429,7 +420,6 @@
     </div>
 </section>
 
-<!-- ВИДЕО -->
 <section class="video-section" id="promo-video">
     <div class="container">
         <div class="section-header">
@@ -446,7 +436,6 @@
     </div>
 </section>
 
-<!-- БЫСТРАЯ ПОКУПКА -->
 <section id="buy">
     <div class="container">
         <div class="quick-buy glass-card">
@@ -477,7 +466,6 @@
     </div>
 </section>
 
-<!-- О ТОКЕНЕ -->
 <section id="about">
     <div class="container">
         <div class="section-header">
@@ -487,31 +475,30 @@
         </div>
         <div class="about-grid">
             <div class="about-card glass-card"><div class="about-icon">✈️</div><h3>Proven</h3><p>1B passengers, 15 years of service, 520+ new routes opened.</p></div>
-            <div class="about-card glass-card"><div class="about-icon">⚡</div><h3>Solana Speed</h3><p>Instant settlements, fees &lt; $0.001.</p></div>
-            <div class="about-card glass-card"><div class="about-icon">🔒</div><h3>Fixed Supply</h3><p>1B supply. Mint Authority disabled.</p></div>
-            <div class="about-card glass-card"><div class="about-icon">🌍</div><h3>Global Payment Rails</h3><p>SWIFT, SEPA, POS, CIPS, Fedwire, CHIPS, BUNA, UPI, PIX, NPP.</p></div>
+            <div class="about-card glass-card"><div class="about-icon">🔧</div><h3>5000+ Parts</h3><p>GEnx, Trent 1000, composite airframe — global parts pool.</p></div>
+            <div class="about-card glass-card"><div class="about-icon">💳</div><h3>Aircraft Sales</h3><p>Tokenized aircraft sales &amp; leasing rights on-chain.</p></div>
+            <div class="about-card glass-card"><div class="about-icon">🌍</div><h3>Payment Rails</h3><p>SWIFT, SEPA, POS, CIPS, Fedwire, CHIPS, BUNA, UPI, PIX, NPP.</p></div>
         </div>
         <div class="image-block">
-            <img src="b787_chart.jpg" alt="Boeing 787 Tokenomics Chart" />
+            <img src="b787_chart.png" alt="Boeing 787 Tokenomics Chart" />
         </div>
     </div>
 </section>
 
-<!-- FINTECH -->
 <section id="fintech">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Fintech • Leasing • Parts</span>
+            <span class="section-tag">Aircraft Sales • Leasing • Parts</span>
             <h2>Powerful <span class="highlight">Fintech</span></h2>
         </div>
         <div class="image-block">
             <img src="b787_fintech_diagram.png" alt="Boeing 787 Fintech Diagram" />
         </div>
         <div class="rwa-grid">
-            <div class="rwa-card glass-card"><div class="rwa-icon">✈️</div><h4>Aircraft Leasing</h4><p>$B787 is the unit of account for 787 leasing rights. AerCap holds ~140 Dreamliners.</p></div>
-            <div class="rwa-card glass-card"><div class="rwa-icon">🔧</div><h4>Parts & Components</h4><p>Interchangeable engines (GEnx / Trent 1000) create a global parts pool.</p></div>
-            <div class="rwa-card glass-card"><div class="rwa-icon">📋</div><h4>Service History</h4><p>Composite airframe requires unique maintenance cycles. $B787 carries tokenized logbook.</p></div>
-            <div class="rwa-card glass-card"><div class="rwa-icon">💳</div><h4>Payment Rails</h4><p>SWIFT, SEPA, CIPS, UPI, PIX, Fedwire, CHIPS — $B787 connects them all.</p></div>
+            <div class="rwa-card glass-card"><div class="rwa-icon">💺</div><h4>Aircraft Sales</h4><p>Buy, sell, and trade 787 aircraft rights — tokenized on Solana.</p></div>
+            <div class="rwa-card glass-card"><div class="rwa-icon">✈️</div><h4>Aircraft Leasing</h4><p>AerCap holds ~140 Dreamliners. $B787 tracks leasing flow.</p></div>
+            <div class="rwa-card glass-card"><div class="rwa-icon">🔧</div><h4>5000+ Parts</h4><p>GEnx / Trent 1000 / composite — full parts marketplace.</p></div>
+            <div class="rwa-card glass-card"><div class="rwa-icon">📋</div><h4>Service History</h4><p>Tokenized logbook for each airframe.</p></div>
         </div>
         <div style="text-align:center; margin-top:16px;">
             <a href="fintech2.html" class="btn-secondary">Explore Fintech →</a>
@@ -519,27 +506,23 @@
     </div>
 </section>
 
-<!-- ТИКЕР 2 -->
 <div class="ticker ticker-bottom">
     <div class="ticker-track">
         <span>✈️ <span class="highlight-ticker">Boeing 787 = $0.01</span> • 100× to $1.00</span>
         <span>✦ Contract: <span class="contract-ticker">B787ContractAddressHere</span></span>
-        <span>✦ The Proven Asset of AviaTrust</span>
+        <span>✦ Aircraft Sales • Leasing • 5000+ Parts</span>
         <span>✦ Solana — 65,000 TPS</span>
         <span>✦ SWIFT • SEPA • POS • CIPS • UPI • PIX</span>
         <span>✦ 365 Days Liquidity Lock</span>
-        <span>✦ Leasing • Parts • Service History</span>
         <span>✈️ <span class="highlight-ticker">Boeing 787 = $0.01</span> • 100× to $1.00</span>
         <span>✦ Contract: <span class="contract-ticker">B787ContractAddressHere</span></span>
-        <span>✦ The Proven Asset of AviaTrust</span>
+        <span>✦ Aircraft Sales • Leasing • 5000+ Parts</span>
         <span>✦ Solana — 65,000 TPS</span>
         <span>✦ SWIFT • SEPA • POS • CIPS • UPI • PIX</span>
         <span>✦ 365 Days Liquidity Lock</span>
-        <span>✦ Leasing • Parts • Service History</span>
     </div>
 </div>
 
-<!-- ПОДВАЛ -->
 <footer>
     <div class="container footer-inner">
         <div class="footer-brand">
@@ -565,7 +548,7 @@
         &nbsp;·&nbsp;
         📦 Orders: <span class="counter-holders">1,203</span>
         &nbsp;·&nbsp;
-        ✅ Delivered: <span class="counter-clients">475+</span>
+        🔧 Parts: <span class="counter-clients">5000+</span>
         <br />
         <span class="time counter-visitor-time">Updated: —</span>
     </div>
